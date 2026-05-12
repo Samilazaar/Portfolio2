@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+*.log
+.env
+.vscode/
+.idea/
+*.swp
+
+# Modèles Mixamo bruts (à convertir en .glb avant commit)
+assets/models/*.fbx

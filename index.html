@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sami Lazaar — Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bungee&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="particles-js">
+
+    <!-- =============== WORLD BACKGROUND (sunset + skylines, permanent) =============== -->
+    <div class="world-bg" aria-hidden="true">
+        <div class="world-sun"></div>
+        <div class="world-clouds"></div>
+
+        <svg class="world-skyline world-skyline-top" viewBox="0 0 1600 320" preserveAspectRatio="none">
+            <g fill="#1a0030">
+                <rect x="0"    y="180" width="60"  height="140"/>
+                <rect x="55"   y="120" width="80"  height="200"/>
+                <rect x="130"  y="160" width="50"  height="160"/>
+                <rect x="175"  y="80"  width="90"  height="240"/>
+                <rect x="260"  y="140" width="70"  height="180"/>
+                <rect x="325"  y="50"  width="100" height="270"/>
+                <rect x="420"  y="110" width="60"  height="210"/>
+                <rect x="475"  y="170" width="50"  height="150"/>
+                <rect x="520"  y="90"  width="110" height="230"/>
+                <rect x="625"  y="40"  width="80"  height="280"/>
+                <rect x="700"  y="130" width="70"  height="190"/>
+                <rect x="765"  y="180" width="55"  height="140"/>
+                <rect x="815"  y="70"  width="120" height="250"/>
+                <rect x="930"  y="150" width="60"  height="170"/>
+                <rect x="985"  y="100" width="90"  height="220"/>
+                <rect x="1070" y="60"  width="70"  height="260"/>
+                <rect x="1135" y="160" width="80"  height="160"/>
+                <rect x="1210" y="120" width="60"  height="200"/>
+                <rect x="1265" y="190" width="70"  height="130"/>
+                <rect x="1330" y="90"  width="100" height="230"/>
+                <rect x="1425" y="140" width="60"  height="180"/>
+                <rect x="1480" y="80"  width="80"  height="240"/>
+                <rect x="1555" y="170" width="50"  height="150"/>
+            </g>
+            <g fill="#FFD580" class="world-window">
+                <rect x="70"  y="150" width="3" height="3"/>
+                <rect x="195" y="120" width="3" height="3"/>
+                <rect x="350" y="100" width="3" height="3"/>
+                <rect x="395" y="80"  width="3" height="3"/>
+                <rect x="540" y="120" width="3" height="3"/>
+                <rect x="640" y="90"  width="3" height="3"/>
+                <rect x="830" y="100" width="3" height="3"/>
+                <rect x="1010" y="130" width="3" height="3"/>
+                <rect x="1085" y="100" width="3" height="3"/>
+                <rect x="1355" y="120" width="3" height="3"/>
+                <rect x="1500" y="120" width="3" height="3"/>
+            </g>
+        </svg>
+
+        <svg class="world-skyline world-skyline-bottom" viewBox="0 0 1600 200" preserveAspectRatio="none">
+            <g fill="#0a0014">
+                <rect x="0"    y="80"  width="70"  height="120"/>
+                <rect x="60"   y="40"  width="100" height="160"/>
+                <rect x="155"  y="100" width="60"  height="100"/>
+                <rect x="210"  y="60"  width="80"  height="140"/>
+                <rect x="285"  y="90"  width="70"  height="110"/>
+                <rect x="350"  y="30"  width="110" height="170"/>
+                <rect x="455"  y="80"  width="60"  height="120"/>
+                <rect x="510"  y="50"  width="90"  height="150"/>
+                <rect x="595"  y="100" width="70"  height="100"/>
+                <rect x="660"  y="20"  width="80"  height="180"/>
+                <rect x="735"  y="70"  width="100" height="130"/>
+                <rect x="830"  y="110" width="60"  height="90"/>
+                <rect x="885"  y="40"  width="120" height="160"/>
+                <rect x="1000" y="80"  width="70"  height="120"/>
+                <rect x="1065" y="50"  width="90"  height="150"/>
+                <rect x="1150" y="100" width="60"  height="100"/>
+                <rect x="1205" y="30"  width="80"  height="170"/>
+                <rect x="1280" y="80"  width="100" height="120"/>
+                <rect x="1375" y="60"  width="60"  height="140"/>
+                <rect x="1430" y="90"  width="80"  height="110"/>
+                <rect x="1505" y="40"  width="100" height="160"/>
+            </g>
+        </svg>
+
+        <div class="world-grain"></div>
+    </div>
+
+    <!-- =============== LANDING SCREEN =============== -->
+    <div id="landing-screen" class="landing-screen">
+        <!-- Skyline du haut (inversée) -->
+        <svg class="landing-skyline landing-skyline-top" viewBox="0 0 1600 320" preserveAspectRatio="none" aria-hidden="true">
+            <g fill="#1a0030">
+                <rect x="0"    y="180" width="60"  height="140"/>
+                <rect x="55"   y="120" width="80"  height="200"/>
+                <rect x="130"  y="160" width="50"  height="160"/>
+                <rect x="175"  y="80"  width="90"  height="240"/>
+                <rect x="260"  y="140" width="70"  height="180"/>
+                <rect x="325"  y="50"  width="100" height="270"/>
+                <rect x="420"  y="110" width="60"  height="210"/>
+                <rect x="475"  y="170" width="50"  height="150"/>
+                <rect x="520"  y="90"  width="110" height="230"/>
+                <rect x="625"  y="40"  width="80"  height="280"/>
+                <rect x="700"  y="130" width="70"  height="190"/>
+                <rect x="765"  y="180" width="55"  height="140"/>
+                <rect x="815"  y="70"  width="120" height="250"/>
+                <rect x="930"  y="150" width="60"  height="170"/>
+                <rect x="985"  y="100" width="90"  height="220"/>
+                <rect x="1070" y="60"  width="70"  height="260"/>
+                <rect x="1135" y="160" width="80"  height="160"/>
+                <rect x="1210" y="120" width="60"  height="200"/>
+                <rect x="1265" y="190" width="70"  height="130"/>
+                <rect x="1330" y="90"  width="100" height="230"/>
+                <rect x="1425" y="140" width="60"  height="180"/>
+                <rect x="1480" y="80"  width="80"  height="240"/>
+                <rect x="1555" y="170" width="50"  height="150"/>
+            </g>
+            <!-- fenêtres éclairées -->
+            <g fill="#FFD580" class="landing-window">
+                <rect x="70"   y="150" width="3" height="3"/>
+                <rect x="78"   y="160" width="3" height="3"/>
+                <rect x="195"  y="120" width="3" height="3"/>
+                <rect x="205"  y="140" width="3" height="3"/>
+                <rect x="350"  y="100" width="3" height="3"/>
+                <rect x="370"  y="130" width="3" height="3"/>
+                <rect x="395"  y="80"  width="3" height="3"/>
+                <rect x="540"  y="120" width="3" height="3"/>
+                <rect x="600"  y="150" width="3" height="3"/>
+                <rect x="640"  y="90"  width="3" height="3"/>
+                <rect x="670"  y="120" width="3" height="3"/>
+                <rect x="830"  y="100" width="3" height="3"/>
+                <rect x="870"  y="140" width="3" height="3"/>
+                <rect x="900"  y="180" width="3" height="3"/>
+                <rect x="1010" y="130" width="3" height="3"/>
+                <rect x="1040" y="160" width="3" height="3"/>
+                <rect x="1085" y="100" width="3" height="3"/>
+                <rect x="1110" y="140" width="3" height="3"/>
+                <rect x="1240" y="160" width="3" height="3"/>
+                <rect x="1355" y="120" width="3" height="3"/>
+                <rect x="1380" y="160" width="3" height="3"/>
+                <rect x="1500" y="120" width="3" height="3"/>
+            </g>
+        </svg>
+
+        <!-- Soleil -->
+        <div class="landing-sun"></div>
+
+        <!-- Nuages atmosphériques -->
+        <div class="landing-clouds"></div>
+
+        <!-- Skyline du bas -->
+        <svg class="landing-skyline landing-skyline-bottom" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+            <g fill="#0a0014">
+                <rect x="0"    y="80"  width="70"  height="120"/>
+                <rect x="60"   y="40"  width="100" height="160"/>
+                <rect x="155"  y="100" width="60"  height="100"/>
+                <rect x="210"  y="60"  width="80"  height="140"/>
+                <rect x="285"  y="90"  width="70"  height="110"/>
+                <rect x="350"  y="30"  width="110" height="170"/>
+                <rect x="455"  y="80"  width="60"  height="120"/>
+                <rect x="510"  y="50"  width="90"  height="150"/>
+                <rect x="595"  y="100" width="70"  height="100"/>
+                <rect x="660"  y="20"  width="80"  height="180"/>
+                <rect x="735"  y="70"  width="100" height="130"/>
+                <rect x="830"  y="110" width="60"  height="90"/>
+                <rect x="885"  y="40"  width="120" height="160"/>
+                <rect x="1000" y="80"  width="70"  height="120"/>
+                <rect x="1065" y="50"  width="90"  height="150"/>
+                <rect x="1150" y="100" width="60"  height="100"/>
+                <rect x="1205" y="30"  width="80"  height="170"/>
+                <rect x="1280" y="80"  width="100" height="120"/>
+                <rect x="1375" y="60"  width="60"  height="140"/>
+                <rect x="1430" y="90"  width="80"  height="110"/>
+                <rect x="1505" y="40"  width="100" height="160"/>
+            </g>
+        </svg>
+
+        <!-- Contenu central -->
+        <div class="landing-content">
+            <h1 class="title-comic chromatic landing-title" data-text="SPIDER-VERSE">SPIDER-VERSE</h1>
+            <p class="landing-subtitle">Un portfolio qui ne suit aucune r&egrave;gle, sauf <span class="text-cyan">la sienne</span>.</p>
+            <button id="landing-enter" class="landing-enter">
+                <span>ENTER</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <span class="landing-hint">click to enter &middot; sound on</span>
+        </div>
+
+        <!-- Grain -->
+        <div class="landing-grain"></div>
+    </div>
+
+    <!-- Halftone & scanlines overlays (purely decorative) -->
+    <div class="halftone-overlay"></div>
+    <div class="scanlines-overlay"></div>
+
+
+    <!-- =============== AUDIO =============== -->
+    <audio id="bgMusic" src="assets/audio/theme.mp3" loop preload="auto"></audio>
+
+    <button id="audioToggle" class="audio-toggle pulse" title="Mute / Unmute">
+        <i class="fa-solid fa-volume-high"></i>
+        <span class="audio-label">SOUND</span>
+    </button>
+
+    <!-- =============== HEADER / NAV =============== -->
+    <header class="nav-bar animate__animated animate__fadeInLeftBig">
+
+        <a class="nav-cv" href="assets/cv.pdf" target="_blank" rel="noopener" title="CV">
+            <i class="fa-regular fa-file"></i>
+            <span class="bungee">CV</span>
+        </a>
+
+        <div class="nav-mobile-bar">
+            <i class="openNav fa-solid fa-bars"></i>
+            <a href="#contact"><i class="fa-solid fa-phone"></i></a>
+        </div>
+
+        <nav class="nav-list" id="navList">
+            <button class="closeNav"><i class="fa-solid fa-close"></i></button>
+            <a href="#accueil" class="nav-link active" data-section="accueil"><i class="fa-solid fa-house"></i><span>Home</span></a>
+            <a href="#skills" class="nav-link" data-section="skills"><i class="fa-solid fa-gear"></i><span>Skills</span></a>
+            <a href="#projets" class="nav-link" data-section="projets"><i class="fa-solid fa-cube"></i><span>Projets</span></a>
+            <a href="#parcours" class="nav-link" data-section="parcours"><i class="fa-solid fa-route"></i><span>Parcours</span></a>
+            <a href="#personalite" class="nav-link" data-section="personalite"><i class="fa-solid fa-person-burst"></i><span>Perso</span></a>
+            <a href="#contact" class="nav-link" data-section="contact"><i class="fa-solid fa-phone"></i><span>Contact</span></a>
+        </nav>
+
+        <a class="nav-gh" href="https://github.com/Samilazaar" target="_blank" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+    </header>
+
+    <!-- =============== MAIN =============== -->
+    <main class="main-content">
+
+        <!-- ACCUEIL -->
+        <section id="accueil" class="page section-anim flex-col">
+            <!-- Web SVG décoratifs aux coins -->
+            <svg class="web-corner top-left" viewBox="0 0 100 100"><path d="M0,0 L100,100 M0,20 Q50,50 100,20 M0,40 Q50,70 100,40 M0,60 Q50,90 100,60 M20,0 Q50,50 20,100 M40,0 Q70,50 40,100 M60,0 Q90,50 60,100" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/></svg>
+            <svg class="web-corner bottom-right" viewBox="0 0 100 100"><path d="M0,0 L100,100 M0,20 Q50,50 100,20 M0,40 Q50,70 100,40 M0,60 Q50,90 100,60 M20,0 Q50,50 20,100 M40,0 Q70,50 40,100 M60,0 Q90,50 60,100" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/></svg>
+
+            <div class="page-text page-text-centered animate__animated animate__fadeInUp">
+                <h1 class="title-comic chromatic" data-text="SAMI LAZAAR">SAMI LAZAAR</h1>
+                <hr class="separator">
+                <p class="body-text"><span class="text-pink">Développeur Full Stack</span> en alternance — Lead Dév <span class="text-cyan">Bac+5</span> chez M2i. 22 ans, basé à Paris.</p>
+                <div class="pow-badge floating">POW!</div>
+                <a href="#skills" class="scroll-down-btn"><i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="page section-anim flex-col">
+            <svg class="web-corner top-right" viewBox="0 0 100 100"><path d="M0,0 L100,100 M0,20 Q50,50 100,20 M0,40 Q50,70 100,40 M0,60 Q50,90 100,60 M20,0 Q50,50 20,100 M40,0 Q70,50 40,100 M60,0 Q90,50 60,100" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/></svg>
+
+            <div class="page-text page-text-centered skills-page animate__animated animate__fadeInUp">
+                <a href="#accueil" class="scroll-up-btn"><i class="fa-solid fa-arrow-up"></i></a>
+                <h1 class="title-comic chromatic" data-text="SKILLS">SKILLS</h1>
+                <hr class="separator">
+
+                <div class="skills-split">
+                    <div class="skills-col skills-acquired">
+                        <h3 class="skills-col-title bangers"><i class="fa-solid fa-check"></i> ACQUIS</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card"><i class="fa-brands fa-react"></i><span>React</span></div>
+                            <div class="skill-card"><i class="fa-brands fa-js"></i><span>JS / TS</span></div>
+                            <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java</span></div>
+                            <div class="skill-card"><i class="fa-solid fa-leaf"></i><span>Spring</span></div>
+                            <div class="skill-card"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+                            <div class="skill-card"><i class="fa-solid fa-database"></i><span>MySQL / PostgreSQL</span></div>
+                            <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+                            <div class="skill-card"><i class="fa-solid fa-diagram-project"></i><span>Agile / UML</span></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-col skills-incoming">
+                        <h3 class="skills-col-title bangers"><i class="fa-solid fa-hourglass-half"></i> À VENIR <small>M2i</small></h3>
+                        <div class="skills-grid">
+                            <div class="skill-card"><i class="fa-solid fa-cubes-stacked"></i><span>Architecture</span></div>
+                            <div class="skill-card"><i class="fa-solid fa-infinity"></i><span>DevOps / CI-CD</span></div>
+                            <div class="skill-card"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+                            <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                            <div class="skill-card"><i class="fa-solid fa-k"></i><span>Kotlin</span></div>
+                            <div class="skill-card"><i class="fa-solid fa-brain"></i><span>ML / LLM</span></div>
+                            <div class="skill-card"><i class="fa-solid fa-shield-halved"></i><span>Cybersécurité</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#projets" class="scroll-down-btn"><i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+        </section>
+
+        <!-- PROJETS -->
+        <section id="projets" class="page section-anim flex-col">
+            <a href="#skills" class="scroll-up-btn self-center"><i class="fa-solid fa-arrow-up"></i></a>
+            <h1 class="title-comic chromatic self-center" data-text="PROJETS">PROJETS</h1>
+            <hr class="separator self-center">
+
+            <div class="projects-mosaic">
+                <article class="project-panel project-hero">
+                    <div class="panel-tag">FEATURED</div>
+                    <h3 class="bangers">SkillHub</h3>
+                    <p>Plateforme web complète développée comme projet fil rouge. Architecture full back/front, gestion des utilisateurs, CRUD complet.</p>
+                    <div class="tags"><span>PHP</span><span>Twig</span><span>JavaScript</span><span>CSS</span></div>
+                    <a href="https://github.com/Samilazaar/dossierfilrouge" target="_blank" class="panel-link">EXPLORER <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="project-panel project-small">
+                    <div class="panel-tag">#01</div>
+                    <h3 class="bangers">Organizer</h3>
+                    <p>Gestion de tâches, stack MERN.</p>
+                    <div class="tags"><span>React</span><span>Node</span><span>MongoDB</span></div>
+                    <a href="https://github.com/Samilazaar/organizer" target="_blank" class="panel-link">VOIR <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="project-panel project-small">
+                    <div class="panel-tag">#02</div>
+                    <h3 class="bangers">RecordJO</h3>
+                    <p>Vitrine des records olympiques d'athlétisme.</p>
+                    <div class="tags"><span>JS</span><span>HTML</span><span>CSS</span></div>
+                    <a href="https://github.com/Samilazaar/RecordJO" target="_blank" class="panel-link">VOIR <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="project-panel project-small">
+                    <div class="panel-tag">#03</div>
+                    <h3 class="bangers">TalentFoot</h3>
+                    <p>Profils de joueurs de football, projet vitrine.</p>
+                    <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                    <a href="https://github.com/Samilazaar/talentfoot" target="_blank" class="panel-link">VOIR <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+            </div>
+
+            <a href="#parcours" class="scroll-down-btn self-center"><i class="fa-solid fa-arrow-down"></i></a>
+        </section>
+
+        <!-- PARCOURS (Scolarité + Expérience en frise horizontale) -->
+        <section id="parcours" class="page section-anim flex-col">
+            <a href="#projets" class="scroll-up-btn self-center"><i class="fa-solid fa-arrow-up"></i></a>
+            <h1 class="title-comic chromatic self-center" data-text="PARCOURS">PARCOURS</h1>
+            <hr class="separator self-center">
+
+            <div class="parcours-legend">
+                <span class="legend-dot legend-school"></span> Études
+                <span class="legend-dot legend-job"></span> Expériences pro
+            </div>
+
+            <div class="parcours-wrap">
+                <div class="parcours-track">
+                    <div class="parcours-line"></div>
+
+                    <div class="parcours-item top school">
+                        <div class="parcours-year">2026 → 28</div>
+                        <div class="parcours-card">
+                            <h3 class="bangers">Lead Dév Bac+5</h3>
+                            <p class="parcours-where">M2i — alternance</p>
+                            <p>Design patterns, architectures, DevOps & CI/CD.</p>
+                        </div>
+                    </div>
+
+                    <div class="parcours-item bottom job">
+                        <div class="parcours-year">2025 →</div>
+                        <div class="parcours-card">
+                            <h3 class="bangers">Dév Full Stack</h3>
+                            <p class="parcours-where">Qalam Software — alternance</p>
+                            <p>React + Spring Boot, API REST, MySQL, Git.</p>
+                        </div>
+                    </div>
+
+                    <div class="parcours-item top school">
+                        <div class="parcours-year">25 → 26</div>
+                        <div class="parcours-card">
+                            <h3 class="bangers">Bachelor CDA</h3>
+                            <p class="parcours-where">IMIE Paris — alternance</p>
+                            <p>Concepteur Développeur Full Stack (Bac+3).</p>
+                        </div>
+                    </div>
+
+                    <div class="parcours-item bottom job">
+                        <div class="parcours-year">2025</div>
+                        <div class="parcours-card">
+                            <h3 class="bangers">Médiateur numérique</h3>
+                            <p class="parcours-where">France Travail — Service Civique</p>
+                            <p>Accompagnement usagers, diagnostic technique.</p>
+                        </div>
+                    </div>
+
+                    <div class="parcours-item top school">
+                        <div class="parcours-year">2025</div>
+                        <div class="parcours-card">
+                            <h3 class="bangers">BTS SIO SLAM</h3>
+                            <p class="parcours-where">Candidat libre</p>
+                            <p>Solutions logicielles & applications métier.</p>
+                        </div>
+                    </div>
+
+                    <div class="parcours-item bottom job">
+                        <div class="parcours-year">2023</div>
+                        <div class="parcours-card">
+                            <h3 class="bangers">Dév Web</h3>
+                            <p class="parcours-where">Mutative — stage</p>
+                            <p>UI en React.js, intégration de maquettes.</p>
+                        </div>
+                    </div>
+
+                    <div class="parcours-item top school">
+                        <div class="parcours-year">2021</div>
+                        <div class="parcours-card">
+                            <h3 class="bangers">Bac STMG</h3>
+                            <p class="parcours-where">Lycée H. de Balzac, Paris</p>
+                            <p>Sciences & technologies du management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#personalite" class="scroll-down-btn self-center"><i class="fa-solid fa-arrow-down"></i></a>
+        </section>
+
+        <!-- PERSONNALITÉ -->
+        <section id="personalite" class="page section-anim flex-col">
+            <a href="#parcours" class="scroll-up-btn self-center"><i class="fa-solid fa-arrow-up"></i></a>
+            <h1 class="title-comic chromatic self-center" data-text="PERSONNALITÉ">PERSONNALITÉ</h1>
+            <hr class="separator self-center">
+
+            <div class="perso-cloud">
+                <div class="bubble bubble-1"><i class="fa-solid fa-bolt"></i> Autonome</div>
+                <div class="bubble bubble-2"><i class="fa-solid fa-magnifying-glass"></i> Rigoureux</div>
+                <div class="bubble bubble-3"><i class="fa-solid fa-people-group"></i> Esprit d'équipe</div>
+                <div class="bubble bubble-4"><i class="fa-solid fa-flask"></i> Curieux</div>
+                <div class="bubble bubble-5"><i class="fa-solid fa-film"></i> Documentaires</div>
+                <div class="bubble bubble-6"><i class="fa-solid fa-book-open"></i> Manga</div>
+                <div class="bubble bubble-7"><i class="fa-solid fa-book-bookmark"></i> Fantasy</div>
+                <div class="bubble bubble-8"><i class="fa-solid fa-futbol"></i> Football</div>
+                <div class="bubble bubble-9"><i class="fa-solid fa-language"></i> EN / AR</div>
+            </div>
+
+            <a href="#contact" class="scroll-down-btn self-center"><i class="fa-solid fa-arrow-down"></i></a>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="page section-anim flex-col">
+            <a href="#personalite" class="scroll-up-btn self-center"><i class="fa-solid fa-arrow-up"></i></a>
+            <h1 class="title-comic chromatic self-center" data-text="CONTACT">CONTACT</h1>
+            <hr class="separator self-center">
+
+            <div class="contact-cta-grid">
+                <a class="cta-tile cta-mail" href="mailto:samie17030@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="cta-label">Mail</span>
+                    <span class="cta-value">samie17030@gmail.com</span>
+                </a>
+                <a class="cta-tile cta-phone" href="tel:+33766200873">
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="cta-label">Tel</span>
+                    <span class="cta-value">07 66 20 08 73</span>
+                </a>
+                <a class="cta-tile cta-github" href="https://github.com/Samilazaar" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <span class="cta-label">GitHub</span>
+                    <span class="cta-value">@Samilazaar</span>
+                </a>
+                <a class="cta-tile cta-linkedin" href="https://linkedin.com/in/sami-lazaar17" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span class="cta-label">LinkedIn</span>
+                    <span class="cta-value">sami-lazaar17</span>
+                </a>
+            </div>
+
+            <div class="pow-badge bam">BAM!</div>
+        </section>
+
+    </main>
+
+    <!-- =============== SCRIPTS =============== -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="script.js"></script>
+    <script src="controler.js"></script>
+</body>
+</html>
